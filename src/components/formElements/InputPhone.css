@@ -1,0 +1,38 @@
+#inputPhone .react-international-phone-input-container {
+    @apply w-full;
+}
+
+#inputPhone
+    .react-international-phone-input-container
+    .react-international-phone-country-selector-button {
+    @apply bg-transparent border border-[#5E5B5F] rounded-s-lg px-5 py-3 h-auto;
+}
+
+#inputPhone
+    .react-international-phone-input-container
+    .react-international-phone-input {
+    @apply w-full bg-transparent text-white border border-[#5E5B5F] pl-5 py-3 text-base rounded-e-lg h-auto outline-none;
+}
+
+#inputPhone .react-international-phone-country-selector-dropdown {
+    @apply bg-[#2C282E] text-white border-none;
+}
+
+#inputPhone
+    .react-international-phone-input-container:hover
+    .react-international-phone-input,
+#inputPhone
+    .react-international-phone-input-container:hover
+    .react-international-phone-country-selector-button {
+    @apply border border-[#7D33DC];
+}
+
+#inputPhone
+    .react-international-phone-country-selector-dropdown__list-item:hover {
+    @apply bg-[#3b3b3b] text-black;
+}
+
+#inputPhone
+    .react-international-phone-country-selector-dropdown__list-item--focused {
+    @apply bg-[#3b3b3b] text-black;
+}
