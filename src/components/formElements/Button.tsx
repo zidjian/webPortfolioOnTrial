@@ -1,3 +1,5 @@
+// "use client"
+
 import Image from "next/image";
 
 interface Props {
@@ -6,6 +8,7 @@ interface Props {
     bgColor?: string;
     border?: string;
     variant?: "bordered" | "solid";
+    onClick?: () => void;
 }
 
 export function Button({
@@ -13,6 +16,7 @@ export function Button({
     text,
     bgColor = "#5E5B5F",
     variant = "solid",
+    onClick,
 }: Props) {
     switch (variant) {
         case "solid":
@@ -23,6 +27,7 @@ export function Button({
                         background: bgColor,
                         border: bgColor,
                     }}
+                    onClick={onClick}
                 >
                     {icon && (
                         <Image src={icon} alt={""} width={20} height={20} />
@@ -38,6 +43,7 @@ export function Button({
                         background: "transparent",
                         border: `solid 1px ${bgColor}`,
                     }}
+                    onClick={onClick}
                 >
                     {icon && (
                         <Image src={icon} alt={""} width={20} height={20} />

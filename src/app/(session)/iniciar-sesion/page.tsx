@@ -1,5 +1,8 @@
+"use client";
+
 import { Button, InputText } from "@/components/formElements";
 import { Divider } from "@/components/general";
+import { signIn } from "next-auth/react";
 import Link from "next/link";
 
 export default function LoginPage() {
@@ -22,14 +25,16 @@ export default function LoginPage() {
                         icon="https://ik.imagekit.io/noj6wnuqy/webPortfolioOnTrial/google.svg"
                         text="Log in with Google"
                         variant="bordered"
+                        onClick={() => {signIn("google")}}
                     />
                     <Button
                         icon="https://ik.imagekit.io/noj6wnuqy/webPortfolioOnTrial/twitch.svg"
                         text="Log in with Twitch"
                         variant="bordered"
+                        onClick={() => {signIn("twitch")}}
                     />
                 </div>
-                <Divider />
+                {/* <Divider />
                 <div className="flex flex-col gap-y-5">
                     <InputText
                         name="email"
@@ -58,7 +63,7 @@ export default function LoginPage() {
                             Regístrate aquí.
                         </Link>
                     </p>
-                </div>
+                </div> */}
             </div>
         </div>
     );
