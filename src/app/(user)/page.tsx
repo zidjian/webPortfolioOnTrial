@@ -1,4 +1,4 @@
-import { InputCode } from "@/components/formElements";
+import { FormSendCode } from "@/components/form";
 
 export default function HomePage() {
     return (
@@ -7,7 +7,7 @@ export default function HomePage() {
                 <h1 className="font-medium text-4xl">Ingresa el ID</h1>
                 <p>Ingresa el ID que ha mandado el anfitrión.</p>
             </div>
-            <InputCode />
+            <FormSendCode />
         </div>
     );
 }
